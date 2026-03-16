@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block assets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/not_found.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="notFound">
+    <div class="imageOverlay">
+        <h1>Немає даних!</h1>
+    </div>
+    <div class="info">
+        <h3>404 - page not found</h3>
+        <p>
+            The page you are looking for might have been removed
+            had its name changed or is temporarily unavailable
+        </p>
+        <a href="{{url_for('home')}}">Go to homepage</a>
+    </div>
+</div>
+{% endblock %}

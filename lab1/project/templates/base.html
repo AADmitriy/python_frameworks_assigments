@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling tourist site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block assets %}
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <div class="homeLink">
+            <a href="{{ url_for('home') }}">
+                <div>
+                    <span id="brand_name">Vacation</span>
+                    <span>Travel Agency</span>
+                </div>
+            </a>
+        </div>
+        <div class="pageLinks">
+            <a href="{{ url_for('get_tour_operator', tour_operator_name='Uganda travel') }}">Tours by tour operator name</a>
+            <a href="{{ url_for('get_tour_with_n_days', days_number='3') }}">Tours with at least n days</a>
+            <a href="{{ url_for('get_turkey_best_tour')}}">Turkey luxury</a>
+        </div>
+    </nav>
+    {% block content %}
+    <div class="homeBg">
+        <div class="homeText">
+            <div>Let's discover the world together</div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
