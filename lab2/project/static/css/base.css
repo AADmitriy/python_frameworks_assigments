@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+nav {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  border-bottom: solid 2px gainsboro;
+  /* margin-bottom: 1rem; */
+}
+
+.homeLink {
+  display: flex;
+  height: 100%;
+}
+
+.homeLink a {
+  padding-inline: 1rem;
+  /* padding-block: 0.5rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  color:aqua;
+}
+
+.homeLink a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.homeLink div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeLink #brand_name {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.homeLink span {
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+
+.pageLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pageLinks a {
+  color: black;
+  font-weight: bold;
+}
+
+.pageLinks a:hover {
+  color: rgb(44, 156, 255);
+}
+
+
+.homeBg {
+  background-image: url("../images/background_home.jpg");
+  background-size: cover;
+  height: calc(100vh - 68px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: capitalize;
+}
+
+
+.homeBg .homeText {
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeBg .homeText div {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+

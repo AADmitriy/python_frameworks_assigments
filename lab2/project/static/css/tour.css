@@ -1,0 +1,29 @@
+#tourContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  font-size: 1.5rem;
+}
+
+.tourNotFound {
+  margin-top: 3rem;
+  font-size: 2.65rem;
+
+  background-image: url("../images/text_overlay.JPG");
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text; /* For broader compatibility */
+  background-clip: text;
+
+  font-weight: bold;
+  text-wrap-mode: nowrap;
+}
+
+
+th, td {
+  text-align: left;
+  padding: .5rem 1rem;
+}

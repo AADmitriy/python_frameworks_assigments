@@ -1,0 +1,62 @@
+[
+    {
+        "country": "Uganda",
+        "tour_operator": "Uganda travel",
+        "price": 3000,
+        "days": 30
+    },
+    {
+        "country": "Kenya",
+        "tour_operator": "Kenya travel",
+        "price": 500,
+        "days": 5
+    },
+    {
+        "country": "Rwanda",
+        "tour_operator": "Rwanda travel",
+        "price": 3700,
+        "days": 15
+    },
+    {
+        "country": "Burundi",
+        "tour_operator": "Burundi travel",
+        "price": 7000,
+        "days": 2
+    },
+    {
+        "country": "Estvanini",
+        "tour_operator": "Estvanini travel",
+        "price": 666,
+        "days": 777
+    },
+    {
+        "country": "Kuwait",
+        "tour_operator": "Kuwait travel",
+        "price": 88800,
+        "days": 90
+    },
+    {
+        "country": "Bahrain",
+        "tour_operator": "Bahrain travel",
+        "price": 300000,
+        "days": 160
+    },
+    {
+        "country": "Turkey",
+        "tour_operator": "Turkey luxury travel",
+        "price": 88800,
+        "days": 90
+    },
+    {
+        "country": "Turkey",
+        "tour_operator": "Turkey presidental travel",
+        "price": 300000,
+        "days": 160
+    },
+    {
+        "country": "Turkey",
+        "tour_operator": "Turkey cheap travel",
+        "price": 10,
+        "days": 7
+    }
+]
