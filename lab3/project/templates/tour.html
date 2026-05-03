@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block assets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tour.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div id="tourContent">
+    {% if form %}
+    <form method="GET" action="{{ url_for('get_tour_operator') }}" novalidate>
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-select" + (" is-invalid" if form.name.errors else "")) }}
+            {% for error in form.name.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+        {{ form.submit(class="btn btn-primary w-100") }}
+    </form>
+    {% endif %}
+    {% if tour %}
+        <table>
+            <tr>
+                <th>Country:</th>
+                <td>{{tour.country}}</td>
+            </tr>
+            <tr>
+                <th>Tour operator:</th>
+                <td>{{tour.tour_operator}}</td>
+            </tr>
+            <tr>
+                <th>Price:</th>
+                <td>{{tour.price}}</td>
+            </tr>
+            <tr>
+                <th>Duration in days</th>
+                <td>{{tour.days}}</td>
+            </tr>
+        </table>
+    {% else %}
+        <div class="tourNotFound">
+            No such tour was found 
+            <p>{{search_input}}</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

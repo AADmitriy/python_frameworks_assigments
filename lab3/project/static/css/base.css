@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.homeLink a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#navbarMenu.collapse .pageLinks {
+  align-items: center; 
+  justify-content: end;
+  gap: 4;
+}
+
+#navbarMenu.show .pageLinks {
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 2;
+}
+
+.pageLinks a:hover {
+  color: rgb(44, 156, 255) !important;
+}
+
+.pageLinks {
+  justify-content: end;
+  gap: 1.5rem;
+}
+
+@media (max-width: 770px) {
+  .pageLinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position:absolute;
+    z-index: 1000
+  }
+}
+
+
+.homeBg {
+  background-image: url("../images/background_home.jpg");
+  background-size: cover;
+  height: calc(100vh - 68px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: capitalize;
+}
+
+
+.homeBg .homeText {
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeBg .homeText div {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+

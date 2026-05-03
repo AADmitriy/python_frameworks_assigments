@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block assets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tour_days.css') }}">
+{% endblock %}
+
+{% block content %}
+<div id="tourDaysPage">
+    <form method="GET" action="{{ url_for('search') }}" class="w-50" novalidate>
+        <div class="mb-3">
+            {{ form.search_option.label(class="form-label fw-bold") }}
+            {% for subfield in form.search_option %}
+            <div class="form-check">
+                {{ subfield(class="form-check-input" + (" is-invalid" if form.search_option.errors else "")) }}
+                {{ subfield.label(class="form-check-label") }}
+            </div>
+            {% endfor %}
+            {% for error in form.search_option.errors %}
+                <div class="text-danger small">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-select" + (" is-invalid" if form.name.errors else "")) }}
+            {% for error in form.name.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ form.days.label(class="form-label") }}
+            {{ form.days(class="form-control" + (" is-invalid" if form.days.errors else "")) }}
+            {% for error in form.days.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+        {{ form.submit(class="btn btn-primary w-100") }}
+    </form>
+    <table>
+        <tr>
+          <th>Country</th>
+          <th>Tour operator</th>
+          <th>Price</th>
+          <th>Duration in days</th>
+        </tr>
+        <tbody>
+            {% for tour in tours %}
+                <tr>
+                    <td>{{tour.country}}</td>
+                    <td>{{tour.tour_operator}}</td>
+                    <td>{{tour.price}}</td>
+                    <td>{{tour.days}}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td>No data</td>
+                    <td>No data</td>
+                    <td>No data</td>
+                    <td>No data</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

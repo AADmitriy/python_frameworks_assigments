@@ -1,0 +1,58 @@
+.notFound {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notFound h1 {
+  background-image: url("../images/text_overlay.JPG");
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text; /* For broader compatibility */
+  background-clip: text;
+
+  font-weight: bold;
+  text-wrap-mode: nowrap;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-shadow: 4px 4px #0000004d; */
+}
+
+.notFound .info {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.notFound h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-wrap-mode: nowrap;
+  font-size: 2rem;
+  width: fit-content;
+  margin-inline: auto
+}
+
+.notFound p {
+  width: 400px;
+  text-align: center;
+}
+
+.notFound a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  background-color: rgb(45, 101, 255);
+  color: white;
+  text-decoration: none;
+  border-radius: 9999px;
+}
+
+.notFound a:hover {
+  background-color: rgb(31, 91, 255);
+}

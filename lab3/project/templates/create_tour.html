@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block assets %}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Create Tour</h3>
+          {% if form %}
+          <form method="POST" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+              {{ form.country.label(class="form-label") }}
+              {{ form.country(class="form-control" + (" is-invalid" if form.country.errors else "")) }}
+              {% for error in form.country.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              {{ form.tour_operator.label(class="form-label") }}
+              {{ form.tour_operator(class="form-control" + (" is-invalid" if form.tour_operator.errors
+              else "")) }}
+              {% for error in form.tour_operator.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              {{ form.price.label(class="form-label") }}
+              {{ form.price(class="form-control" + (" is-invalid" if form.price.errors else "")) }}
+              {% for error in form.price.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              {{ form.days.label(class="form-label") }}
+              {{ form.days(class="form-control" + (" is-invalid" if form.days.errors else "")) }}
+              {% for error in form.days.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+              {% endfor %}
+            </div>
+            {{ form.submit(class="btn btn-primary w-100") }}
+          </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
