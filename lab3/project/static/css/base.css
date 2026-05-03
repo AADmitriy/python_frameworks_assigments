@@ -34,7 +34,7 @@ body {
   gap: 1.5rem;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 990px) {
   .pageLinks {
     flex-direction: column;
     justify-content: center;
